@@ -1,0 +1,14 @@
+<!--pages/receipt/receipt.wxml-->
+<view class="receipt_box">
+  <view class="img_box"></view>
+  <view class="toast">*电子回单的发来吧效力以有关机关实际判断为准</view>
+  <view class="email">
+    <view class="email_label">接收邮箱</view>
+    <input class="input" bindinput="changeEmail" placeholder-style="color:#666666" placeholder="请填写您的邮箱账号"/>
+  </view>
+  <view class="sub">电子回单是一份具有电子签名的图片，将以邮件的形式发送到您
+指定的接收邮箱</view>
+<view class="button">
+  <button-com text="发送到邮箱" bind:onEmit="push"/>
+  </view>
+</view>

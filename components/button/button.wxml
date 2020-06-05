@@ -1,0 +1,4 @@
+<!--components/button/button.wxml-->
+<view class="button_box {{!isClick ? 'opacity-back' : ''}}" bindtap="onEmit">
+  {{text}}
+</view>

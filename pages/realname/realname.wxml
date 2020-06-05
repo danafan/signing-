@@ -1,0 +1,18 @@
+<!--pages/realname/realname.wxml-->
+<view class="realname_box">
+  <view class="card">
+    <view class="card_left">
+      <view class="card_title">居民身份证认证</view>
+      <view class="card_sub">我持有中华人民共和国居民身份证</view>
+    </view>
+    <image class="user_card" src="../../images/user_card.png"></image>
+  </view>
+  <view class="card">
+    <view class="card_left">
+      <view class="card_title">其他身份证件认证</view>
+      <view class="card_sub">我持有其他身份证件</view>
+    </view>
+    <image class="pass" src="../../images/pass.png"></image>
+  </view>
+  <view class="toast">《“关于自然纳税人有效身份证件”的说明》</view>
+</view>

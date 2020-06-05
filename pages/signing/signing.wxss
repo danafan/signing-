@@ -1,0 +1,44 @@
+/* pages/signing/signing.wxss */
+
+.signing_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.signing_item {
+  margin-top: 30rpx;
+  width: 680rpx;
+  height: 200rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+}
+.name{
+  font-size: 32rpx;
+  color: #333333;
+}
+.xieyi{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #3778FF;
+}
+.time{
+  font-size: 24rpx;
+  color: #999999;
+}
+.item_icon{
+  width: 164rpx;
+  height: 144rpx;
+}

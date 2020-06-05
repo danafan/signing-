@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收款详情",
+  "usingComponents": {
+    "button-com": "/components/button/button"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "汇款电子回单",
+  "usingComponents": {
+    "button-com": "/components/button/button"
+  }
+}

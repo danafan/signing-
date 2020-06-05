@@ -1,0 +1,10 @@
+<!--pages/login/login.wxml-->
+<view class="login_container">
+  <view class="login_title">验证码登录</view>
+  <input class="input" value="{{phone}}" type="number" bindinput="changePhone" placeholder-style="color:#B9C0D4" placeholder="请输入手机号码"/>
+  <view class="code_box">
+    <input class="input position" type="number" bindinput="changeCode" placeholder-style="color:#B9C0D4" placeholder="验证码"/>
+    <view class="code_text {{!notBut?'code_text_active':''}}" bindtap="getCode">{{codebutTxt}}</view>
+  </view>
+  <button-com text="登录" bind:onEmit="login" isClick="{{isClick}}"/>
+</view>

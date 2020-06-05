@@ -1,0 +1,11 @@
+<!--pages/collection_record/collection_record.wxml-->
+<view class="record_box">
+  <view class="record_item">
+    <view class="item_left">
+      <view class="title">德尔网络</view>
+      <view class="time">2020-05-26 12:22:11</view>
+    </view>
+    <view class="money">+6666.00</view>
+  </view>
+  
+</view>

@@ -1,0 +1,27 @@
+<!--pages/user_info/user_info.wxml-->
+<view class="user_info_box">
+  <view class="info_item">
+    <view class="label">国籍（地区）</view>
+    <view class="value">中国</view>
+  </view>
+  <view class="info_item">
+    <view class="label">姓名</view>
+    <view class="value">王富贵</view>
+  </view>
+  <view class="info_item">
+    <view class="label">证件类型</view>
+    <view class="value">居民身份证</view>
+  </view>
+  <view class="info_item">
+    <view class="label">证件号码</view>
+    <view class="value">152223199387372627</view>
+  </view>
+  <view class="info_item">
+    <view class="label">证件有效期</view>
+    <view class="value">2022-20-25</view>
+  </view>
+  <view class="info_item">
+    <view class="label">银行卡</view>
+    <view class="value">2337438234792834723847</view>
+  </view>
+</view>

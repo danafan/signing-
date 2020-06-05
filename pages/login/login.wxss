@@ -1,0 +1,58 @@
+/* pages/login/login.wxss */
+.login_container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+
+}
+.login_title{
+  margin-top: 118rpx;
+  margin-bottom: 84rpx;
+  font-weight:500;
+  font-size: 44rpx;
+  color: #000000;
+}
+.code_box{
+  margin-bottom: 144rpx;
+  margin-top: 26rpx;
+  position: relative;
+  width: 658rpx;
+  height: 92rpx;
+}
+.position{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%;
+  height: 100%;
+  padding-right: 210rpx;
+}
+.input{
+  border-radius:8rpx;
+  box-sizing: border-box;
+  padding-left: 38rpx;
+  background: #F5F7FE;
+  width: 658rpx;
+  height: 92rpx;
+  font-size: 32rpx;
+}
+.code_text{
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+  width: 200rpx;
+  text-align: end;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 24rpx;
+  color:#000;
+}
+.code_text_active{
+  color:#666;
+}

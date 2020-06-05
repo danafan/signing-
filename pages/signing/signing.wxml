@@ -1,0 +1,12 @@
+<!--pages/signing/signing.wxml-->
+<view class="signing_box">
+  <view class="signing_item">
+    <view class="item_left">
+      <view class="name">签约主体名字</view>
+      <view class="xieyi" bindtap="agreement">《xxxxxxxxxxx协议》</view>
+      <view class="time">2020-05-26 12:22:11</view>
+    </view>
+    <image class="item_icon" src="../../images/signing.png"></image>
+  </view>
+  
+</view>

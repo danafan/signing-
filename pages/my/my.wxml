@@ -1,0 +1,34 @@
+<!--pages/my/my.wxml-->
+<view class="my_box">
+  <view class="my_back_box">
+    <image class="my_back_img" src="../../images/my_back.png"></image>
+    <view class="my_back_content">
+      <image class="user_img" src="../../images/index_img.png"></image>
+      <view class="user_info">
+        <view class="phone">13603645463</view>
+        <view class="ren_box">
+          <image class="ren_icon" src="../../images/certification.png"></image>
+          <view class="ren_text">已认证</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="earnings_box">
+    <view class="earnings_title">总收益（元）</view>
+    <view class="money">10000000.00</view>
+  </view>
+  <view class="tabs">
+    <view class="tab_item">
+      <image class="tab_icon" src="../../images/record_icon.png"></image>
+      <view class="tab_txt">收款记录</view>
+    </view>
+    <view class="tab_item">
+      <image class="tab_icon" src="../../images/user_info_icon.png"></image>
+      <view class="tab_txt">个人信息</view>
+    </view>
+    <view class="tab_item">
+      <image class="tab_icon" src="../../images/signing_icon.png"></image>
+      <view class="tab_txt">签约信息</view>
+    </view>
+  </view>
+</view>

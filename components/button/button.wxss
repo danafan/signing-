@@ -1,0 +1,14 @@
+/* components/button/button.wxss */
+.button_box{
+  border-radius:46rpx;
+  background: #3778FF;
+  width: 620rpx;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+}
+.opacity-back{
+  background: #D0DFFE;
+}

@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container index_box">
+  <image class="index_img" src="../../images/index_img.png"></image>
+  <view class="index_toast">签约后可享受服务</view>
+  <button-com text="立即签约" bind:onEmit="signing"/>
+</view>

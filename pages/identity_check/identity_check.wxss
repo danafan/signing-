@@ -1,0 +1,53 @@
+/* pages/identity_check/identity_check.wxss */
+
+.input_item {
+  border-bottom: 2rpx solid #e8e8e8;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.phone_item {
+  justify-content: space-between;
+}
+
+.phone_item_left {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  width: 184rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.input {
+  height: 110rpx;
+  font-size: 30rpx;
+}
+
+.bank_num {
+  flex: 1;
+}
+
+.code_txt {
+  font-size: 28rpx;
+  color: #3778ff;
+}
+
+.code_text_active {
+  color: #666;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 638rpx;
+}
