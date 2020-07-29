@@ -1,16 +1,18 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/agreement/agreement",
     "pages/signing/signing",
-    "pages/receipt/receipt",
-    "pages/collection_detail/collection_detail",
-    "pages/collection_record/collection_record",
     "pages/user_info/user_info",
+    "pages/receipt/receipt",
+    "pages/collection_record/collection_record",
+    "pages/page/page",
+    "pages/upload_userinfo/upload_userinfo",
+    "pages/index/index",
+    "pages/collection_detail/collection_detail",
     "pages/identity_check/identity_check",
     "pages/realname/realname",
-    "pages/login/login",
-    "pages/index/index",
-    "pages/agreement/agreement"
+    "pages/login/login"
     
   ],
   "window": {

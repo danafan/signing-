@@ -1,6 +1,6 @@
 <!--pages/realname/realname.wxml-->
 <view class="realname_box">
-  <view class="card">
+  <view class="card" bindtap="goRealname">
     <view class="card_left">
       <view class="card_title">居民身份证认证</view>
       <view class="card_sub">我持有中华人民共和国居民身份证</view>

@@ -1,0 +1,4 @@
+<!--components/NullList/null_list.wxml-->
+<view class="null_list">
+  <image class="null_icon" src="../../images/null_icon.png"></image>
+</view>

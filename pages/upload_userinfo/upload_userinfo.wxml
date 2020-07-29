@@ -1,0 +1,33 @@
+<!--pages/upload_userinfo/upload_userinfo.wxml-->
+<view class="upload_box">
+  <view class="upload_top">
+    <view class="upload_title">身份证正面</view>
+    <upload_file card_type="front" bind:onEmit="cardInfo" wx:if="{{show_card_front == ''}}"/>
+    <view class="img_box" wx:else>
+      <image class="card_img" src="{{show_card_front}}"></image>
+      <view class="close" data-type="front" bindtap="close">
+        <image class="close_icon" src="../../images/close_icon.png"></image>
+      </view>
+    </view>
+    <view class="upload_title">身份证反面</view>
+    <upload_file card_type="back" bind:onEmit="cardInfo" wx:if="{{show_card_back == ''}}"/>
+    <view class="img_box" wx:else>
+      <image class="card_img" src="{{show_card_back}}"></image>
+      <view class="close" data-type="back" bindtap="close">
+        <image class="close_icon" src="../../images/close_icon.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="input_item margin">
+    <view class="label">姓名</view>
+    <input class="input" type="text" bindinput="changeName" placeholder-style="color:#999" placeholder="请输入姓名" />
+  </view>
+  <view class="input_item">
+    <view class="label">身份证号</view>
+    <input class="input" type="idcard" bindinput="changeIdCardNo" placeholder-style="color:#999" placeholder="请输入身份证号" />
+  </view>
+  <view class="but_box">
+  <button-com text="提交" bind:onEmit="submit"/>
+  </view>
+  
+</view>

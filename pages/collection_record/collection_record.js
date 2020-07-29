@@ -1,66 +1,44 @@
 // pages/collection_record/collection_record.js
+const api = require('../../utils/api.js')
+const utils = require('../../utils/util.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    record_list:[],
+    isLoad: true, //默认可以加载
+    page: 1, //当前页码
+    pagesize:10
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(){
+    //获取信息列表
+    let req = { page: this.data.page, page: this.data.pagesize }
+    this.getList(req);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //上拉加载
+  onReachBottom() {
+    if (this.data.isLoad) {
+      this.setData({
+        page: this.data.page + 1
+      })
+      //获取信息列表
+      let req = { page: this.data.page, page: this.data.pagesize }
+      this.getList(req);
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  //获取列表
+  getList(req){
+    utils.get(api.receiverecord, req).then(res => {
+      if (res.code == 1) {
+        this.setData({
+          record_list: [...this.data.record_list, ...res.data]
+        })
+      } 
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //获取详情
+  getRecord(e){
+    let order_id = e.currentTarget.dataset.order_id;
+    wx.navigateTo({
+      url: '/pages/collection_detail/collection_detail?order_id=' + order_id
+    })
   }
 })

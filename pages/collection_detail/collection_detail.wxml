@@ -2,27 +2,27 @@
 <view class="collection_detail_box">
   <view class="detail_item">
     <view class="label">收款账户</view>
-    <view class="value">台州银行（8729347****234）</view>
+    <view class="value">{{infoObj.bank_name}}（{{infoObj.bank_card_no}}）</view>
   </view>
   <view class="detail_item">
     <view class="label">收款方式</view>
-    <view class="value">银行卡</view>
+    <view class="value">{{infoObj.pay_method}}</view>
   </view>
   <view class="detail_item">
     <view class="label">商户名称</view>
-    <view class="value">xx公司</view>
+    <view class="value">{{infoObj.enterprise_name}}</view>
   </view>
   <view class="detail_item">
     <view class="label">创建时间</view>
-    <view class="value">2022-03-22</view>
+    <view class="value">{{infoObj.finished_time}}</view>
   </view>
   <view class="detail_item">
     <view class="label">订单号</view>
-    <view class="value">292837492834729834</view>
+    <view class="value">{{infoObj.order_id}}</view>
   </view>
   <view class="detail_item">
     <view class="label">商户订单号</view>
-    <view class="value">19182349823749283</view>
+    <view class="value">{{infoObj.sorder_sn}}</view>
   </view>
   <view class="button">
   <button-com text="申请电子回单" bind:onEmit="apply"/>

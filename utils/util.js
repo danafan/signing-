@@ -1,19 +1,60 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+/**
+ * GET请求封装
+ */
+function get(url, data = {}) {
+  return request(url, data, 'GET')
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+/**
+ * POST请求封装
+ */
+function post(url, data = {}) {
+  return request(url, data, 'POST')
+}
+
+/**
+ * 微信的request
+ */
+function request(url, data = {}, method = "GET") {
+  wx.showLoading({
+    title: '加载中',
+  })
+  var contentType = 'application/json'
+  return new Promise(function(resolve, reject) {
+    wx.request({
+      url: url,
+      data: { ...data, ...{ _3rd_session: wx.getStorageSync('3rd_session')}},
+      method: method,
+      header: {
+        'Content-Type': contentType
+      },
+      success: function(res) {
+        wx.hideLoading()
+        if (res.data.code == 1) {
+          //请求正常
+          resolve(res.data);
+        } else {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 1500,
+            success: () => {
+              resolve(res.data);
+            }
+          })
+
+        }
+      },
+      fail: function(err) {
+        wx.hideLoading()
+        //服务器连接异常
+        reject("服务器连接异常，请检查网络再试")
+      }
+    })
+  });
 }
 
 module.exports = {
-  formatTime: formatTime
+  get: get,
+  post: post
 }

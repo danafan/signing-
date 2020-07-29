@@ -6,7 +6,7 @@
   </view>
   <view class="info_item">
     <view class="label">姓名</view>
-    <view class="value">王富贵</view>
+    <view class="value">{{userInfo.name}}</view>
   </view>
   <view class="info_item">
     <view class="label">证件类型</view>
@@ -14,14 +14,14 @@
   </view>
   <view class="info_item">
     <view class="label">证件号码</view>
-    <view class="value">152223199387372627</view>
+    <view class="value">{{userInfo.id_card_no}}</view>
   </view>
   <view class="info_item">
     <view class="label">证件有效期</view>
-    <view class="value">2022-20-25</view>
+    <view class="value">{{userInfo.id_card_validity}}</view>
   </view>
   <view class="info_item">
     <view class="label">银行卡</view>
-    <view class="value">2337438234792834723847</view>
+    <view class="value">{{userInfo.bank_card_no}}</view>
   </view>
 </view>

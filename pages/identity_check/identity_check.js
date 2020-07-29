@@ -1,4 +1,6 @@
 // pages/identity_check/identity_check.js
+const api = require('../../utils/api.js')
+const utils = require('../../utils/util.js')
 Page({
   data: {
     bank_num: "", //银行卡号
@@ -6,7 +8,7 @@ Page({
     code: "", //验证码
     codebutTxt:"发送验证码",    //获取验证码提示文字
     notBut:true,      //默认发送验证码按钮可点击
-    time:6,           //倒计时时间
+    time:60,           //倒计时时间
     isClick: false, //默认登录按钮不高亮
   },
   //监听输入的银行卡号
@@ -56,14 +58,20 @@ Page({
       })
     } else {
       if (this.data.notBut == true) { //如果按钮可以点击
-        let obj = {
-          phone: this.data.phone,
-          type: 2
+        let req = {
+          phone: this.data.phone
         }
-        console.log(obj);
-        //倒计时
-        this.timeDown();
         //请求发送短信接口
+        utils.get(api.getbankphonecode, req).then(res => {
+          wx.showToast({
+            title: res.msg,
+            icon: "none",
+            mask: true,
+            duration: 2000
+          })
+          //倒计时
+          this.timeDown();
+        })
       } else {
         wx.showToast({
           title: '操作频繁',
@@ -117,11 +125,24 @@ Page({
       })
     } else {
       let req = {
-        bank_num: this.data.bank_num,
-        phone: this.data.phone,
-        code: this.data.code
+        bank_card_no: this.data.bank_num,
+        bank_phone: this.data.phone,
+        sms_code: this.data.code
       }
-      console.log(req);
+      utils.post(api.commitbankinfo, req).then(res => {
+        if (res.code == 1){
+          wx.showToast({
+            title: res.msg,
+            icon: "none",
+            mask: true,
+            duration: 2000
+          })
+          wx.navigateTo({
+            url: '/pages/my/my'
+          })
+        }
+        
+      })
     }
 
   },

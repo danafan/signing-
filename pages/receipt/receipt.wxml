@@ -1,6 +1,8 @@
 <!--pages/receipt/receipt.wxml-->
 <view class="receipt_box">
-  <view class="img_box"></view>
+  <view class="img_box">
+    <image class="receipt_img" src="{{receipt_url}}"></image>
+  </view>
   <view class="toast">*电子回单的发来吧效力以有关机关实际判断为准</view>
   <view class="email">
     <view class="email_label">接收邮箱</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "身份信息",
+  "usingComponents": {
+    "upload_file": "/components/UploadFile/upload_file",
+    "button-com": "/components/button/button"
+  }
+}

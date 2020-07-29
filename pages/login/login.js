@@ -1,4 +1,7 @@
 // pages/login/login.js
+const app = getApp();
+const api = require('../../utils/api.js')
+const utils = require('../../utils/util.js')
 Page({
   data: {
     isClick: false, //默认登录按钮不高亮
@@ -55,9 +58,20 @@ Page({
     } else {
       let req = {
         phone: this.data.phone,
-        code: this.data.code
+        sms_code: this.data.code
       }
-      console.log(req);
+      utils.get(api.register, req).then(res => {
+        wx.showToast({
+          title: res.msg,
+          icon: "none",
+          mask: true,
+          duration: 2000
+        })
+        wx.navigateTo({
+          url: '/pages/realname/realname'
+        })
+
+      })
     }
 
   },
@@ -72,14 +86,20 @@ Page({
       })
     } else {
       if (this.data.notBut == true) { //如果按钮可以点击
-        let obj = {
-          phone: this.data.phone,
-          type: 2
-        }
-        console.log(obj);
-        //倒计时
-        this.timeDown();
         //请求发送短信接口
+        let req = {
+          phone: this.data.phone
+        }
+        utils.get(api.getregistercode, req).then(res => {
+          wx.showToast({
+            title: res.data.msg,
+            icon: "none",
+            mask: true,
+            duration: 2000
+          })
+          //倒计时
+          this.timeDown();
+        })
       } else {
         wx.showToast({
           title: '操作频繁',

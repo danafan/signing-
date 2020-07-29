@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "收款记录",
-  "usingComponents": {}
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "null_list": "/components/NullList/null_list"
+  }
 }

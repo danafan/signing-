@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText":"首页",
+  "navigationBarTitleText":"签约",
   "usingComponents": {
     "button-com":"/components/button/button"
   }

@@ -5,7 +5,7 @@
     <view class="my_back_content">
       <image class="user_img" src="../../images/index_img.png"></image>
       <view class="user_info">
-        <view class="phone">13603645463</view>
+        <view class="phone">{{index_info.phone}}</view>
         <view class="ren_box">
           <image class="ren_icon" src="../../images/certification.png"></image>
           <view class="ren_text">已认证</view>
@@ -15,18 +15,18 @@
   </view>
   <view class="earnings_box">
     <view class="earnings_title">总收益（元）</view>
-    <view class="money">10000000.00</view>
+    <view class="money">{{index_info.receive_total}}</view>
   </view>
   <view class="tabs">
-    <view class="tab_item">
+    <view class="tab_item" bindtap="goCollection">
       <image class="tab_icon" src="../../images/record_icon.png"></image>
       <view class="tab_txt">收款记录</view>
     </view>
-    <view class="tab_item">
+    <view class="tab_item" bindtap="goUserInfo">
       <image class="tab_icon" src="../../images/user_info_icon.png"></image>
       <view class="tab_txt">个人信息</view>
     </view>
-    <view class="tab_item">
+    <view class="tab_item" bindtap="goSign">
       <image class="tab_icon" src="../../images/signing_icon.png"></image>
       <view class="tab_txt">签约信息</view>
     </view>

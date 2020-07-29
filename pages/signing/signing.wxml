@@ -1,12 +1,14 @@
 <!--pages/signing/signing.wxml-->
 <view class="signing_box">
-  <view class="signing_item">
+  <view class="signing_item" wx:for="{{sign_list}}" wx:key="id">
     <view class="item_left">
-      <view class="name">签约主体名字</view>
-      <view class="xieyi" bindtap="agreement">《xxxxxxxxxxx协议》</view>
-      <view class="time">2020-05-26 12:22:11</view>
+      <view class="name">{{item.service_subject_name}}</view>
+      <view class="xieyi" bindtap="agreement">《{{item.sign_protocol_name}}》</view>
+      <view class="time">{{item.sign_time}}</view>
     </view>
-    <image class="item_icon" src="../../images/signing.png"></image>
+    <image class="item_icon" src="../../images/signing.png" wx:if="{{item.sign_status == '1'}}"></image>
+    <image class="item_icon" src="../../images/signing_active.png" wx:if="{{item.sign_status == '2'}}"></image>
+    <image class="item_icon" src="../../images/sign_black.png" wx:if="{{item.sign_status == '3'}}"></image>
   </view>
-  
+  <null_list wx:if="{{sign_list.length == 0}}"/>
 </view>
