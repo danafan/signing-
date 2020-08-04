@@ -2,7 +2,7 @@
 App({
   onLaunch: function() {
     const login = require('./utils/login.js')
-    // login.login();
+    login.login();
     // 获取用户信息
     // wx.getSetting({
     //   success: res => {

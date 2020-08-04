@@ -1,3 +1,2 @@
 <!--pages/agreement/agreement.wxml-->
-<!-- <web-view src="https://csgx.gxk8090.com/demo.pdf"></web-view> -->
-<!-- <image src="https://csgx.gxk8090.com/demo.pdf"></image> -->
+<web-view src="{{web_url}}"></web-view>

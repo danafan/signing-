@@ -18,4 +18,5 @@ module.exports = {
   sendreceipt: ApiRootUrl + 'user/sendreceipt',           //发送邮箱
   personinfo: ApiRootUrl + 'user/personinfo',           //获取个人信息
   signinfo: ApiRootUrl + 'user/signinfo',               //获取签约信息列表
+  sign: ApiRootUrl + 'user/sign',                   //获取地址
 } 

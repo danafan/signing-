@@ -3,12 +3,12 @@
   <view class="signing_item" wx:for="{{sign_list}}" wx:key="id">
     <view class="item_left">
       <view class="name">{{item.service_subject_name}}</view>
-      <view class="xieyi" bindtap="agreement">《{{item.sign_protocol_name}}》</view>
+      <view class="xieyi" data-sign_status="{{item.sign_status}}" data-id="{{item.id}}" bindtap="agreement">《{{item.sign_protocol_name}}》</view>
       <view class="time">{{item.sign_time}}</view>
     </view>
     <image class="item_icon" src="../../images/signing.png" wx:if="{{item.sign_status == '1'}}"></image>
     <image class="item_icon" src="../../images/signing_active.png" wx:if="{{item.sign_status == '2'}}"></image>
     <image class="item_icon" src="../../images/sign_black.png" wx:if="{{item.sign_status == '3'}}"></image>
   </view>
-  <null_list wx:if="{{sign_list.length == 0}}"/>
+  <null_list wx:if="{{sign_list.length == 0}}" bindtap="agreement"/>
 </view>
