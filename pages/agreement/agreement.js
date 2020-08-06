@@ -7,11 +7,10 @@ Page({
   },
   onLoad: function (options) {
     let id = options.id;
-    console.log(id)
     utils.get(api.sign, { id: id }).then(res => {
       if (res.code == 1) {
         this.setData({
-          web_url: res.data
+          web_url: res.data.sign_url
         })
       }
     })

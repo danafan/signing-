@@ -8,7 +8,10 @@ Page({
     page: 1, //当前页码
     pagesize: 10
   },
-  onLoad(options) {
+  onShow: function () {
+    this.setData({
+      sign_list: []
+    })
     //获取信息列表
     let req = {
       page: this.data.page,
@@ -16,6 +19,14 @@ Page({
     }
     this.getUserInfo(req);
   },
+  // onLoad(options) {
+  //   //获取信息列表
+  //   let req = {
+  //     page: this.data.page,
+  //     page: this.data.pagesize
+  //   }
+  //   this.getUserInfo(req);
+  // },
   //上拉加载
   onReachBottom() {
     if (this.data.isLoad) {
@@ -44,7 +55,7 @@ Page({
   agreement(e) {
     let sign_status = e.currentTarget.dataset.sign_status;
     let id = e.currentTarget.dataset.id;
-    if (sign_status == 2) {
+    if (sign_status == 1) {
       wx.navigateTo({
         url: '/pages/agreement/agreement?id=' + id,
       })

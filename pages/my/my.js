@@ -13,6 +13,7 @@ Page({
   getIndexInfo(){
     utils.get(api.getindex).then(res => {
       if(res.code == 1){
+        console.log(res.data)
         this.setData({
           index_info: res.data
         })

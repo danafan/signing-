@@ -43,6 +43,10 @@ function getUserStatus() {
           url: '/pages/index/index'
         })
         break;
+      case 401:
+        //未登录
+        _wxLogin();
+        break;
       case 402:
         //未实名认证
         wx.navigateTo({

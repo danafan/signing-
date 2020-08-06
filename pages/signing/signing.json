@@ -1,6 +1,5 @@
 {
   "navigationBarTitleText": "签约信息",
-  "enablePullDownRefresh": true,
   "usingComponents": {
     "null_list": "/components/NullList/null_list"
   }

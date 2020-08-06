@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/my/my",
+    "pages/page/page",
     "pages/agreement/agreement",
+    "pages/my/my",
     "pages/signing/signing",
     "pages/user_info/user_info",
     "pages/receipt/receipt",
     "pages/collection_record/collection_record",
-    "pages/page/page",
     "pages/upload_userinfo/upload_userinfo",
     "pages/index/index",
     "pages/collection_detail/collection_detail",
